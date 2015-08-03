@@ -1,0 +1,18 @@
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+
+    - name: Configure Dockerrun.aws
+      template: src=Dockerrun.aws.json.j2
+                dest=../../Dockerrun.aws.json
+      notify:
+        - Commit Dockerrun
+
+  handlers:
+    - name: Commit Dockerrun
+      shell: >
+        git add Dockerrun.aws.json && git commit Dockerrun.aws.json -m "upgraded image version to {{version}}"
+        chdir=../../
+      tags:
+        - restart_supervisor
