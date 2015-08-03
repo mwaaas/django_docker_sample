@@ -1,0 +1,12 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker build -t mwaaas/testing .
+
+test:
+  override:
+    - docker run mwaaas/testing python manage.py test
