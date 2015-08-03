@@ -5,8 +5,8 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build -t mwaaas/testing .
+    - docker build -t mwaaas/testing:$CIRCLE_SHA1 .
 
 test:
   override:
-    - docker run mwaaas/testing python manage.py test
+    - docker run mwaaas/testing:$CIRCLE_SHA1 python manage.py test
