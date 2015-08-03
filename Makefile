@@ -35,3 +35,9 @@ push_app:
 
 redeploy:
 	eb deploy sample-app-staging
+
+# export amazon credentials
+credentials:
+	export AW=$(id)
+	export AWS_SECRET_ACCESS_KEY=$(key)
+
