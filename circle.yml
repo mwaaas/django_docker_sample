@@ -5,11 +5,11 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build -t mwaaas/testing:$CIRCLE_SHA1 .
+    - docker build -t mwaaas/django-sample-app:$CIRCLE_SHA1 .
 
 test:
   override:
-    - docker run mwaaas/testing:$CIRCLE_SHA1 python manage.py test
+    - docker run mwaaas/django-sample-app:$CIRCLE_SHA1 python manage.py test
 
 deployment:
   elasticbeanstalk:
