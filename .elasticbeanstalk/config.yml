@@ -1,0 +1,10 @@
+branch-defaults:
+  develop:
+    environment: staging
+global:
+  application_name: hermes-sms
+  default_ec2_keyname: mwas
+  default_platform: Multi-container Docker 1.6.2 (Generic)
+  default_region: eu-west-1
+  profile: null
+  sc: git
