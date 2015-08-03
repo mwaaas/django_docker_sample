@@ -31,7 +31,7 @@ build_app:
 	docker build --tag=$(NAME):$(version) .
 
 push_app:
-    docker push $(NAME):$(version)
+	docker push $(NAME):$(version)
 
 redeploy:
 	eb deploy sample-app-staging
