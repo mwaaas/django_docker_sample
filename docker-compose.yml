@@ -1,0 +1,5 @@
+web:
+  build: .
+  command: ./app_server.sh
+  ports:
+    - 80:80
