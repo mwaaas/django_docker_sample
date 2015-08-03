@@ -1,2 +1,10 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+
+!.elasticbeanstalk/*config.yml
+!.elasticbeanstalk/global.yml
+
+*.pyc
