@@ -28,10 +28,10 @@ configure_docker_aws:
 	ansible-playbook -c local  devops/app_container/configure_docker_aws.yml --extra-vars='env=$(env) version=$(VERSION) name=$(NAME)'
 
 build_app:
-	docker build --tag=$(NAME):$(version) .
+	docker build --tag=$(NAME):$(VERSION) .
 
 push_app:
-	docker push $(NAME):$(version)
+	docker push $(NAME):$(VERSION)
 
 redeploy:
 	eb deploy sample-app-staging
