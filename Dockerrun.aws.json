@@ -7,10 +7,16 @@
   "containerDefinitions": [
     {
       "name": "web",
-      "image": "mwaaas/django-sample-app:staging_b219",
+      "image": "mwaaas/django-sample-app:staging_ced7",
       "essential": true,
       "memory": 128,
-      "command": ["./app_server.sh"]
+      "command": ["./app_server.sh"],
+        "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ]
     }
   ]
 }
