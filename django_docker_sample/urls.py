@@ -17,5 +17,5 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^crazywizard/', include(admin.site.urls)),
+    url(r'^obat/', include(admin.site.urls)),
 ]
