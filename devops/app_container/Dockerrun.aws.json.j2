@@ -10,7 +10,13 @@
       "image": "{{name}}:{{version}}",
       "essential": true,
       "memory": 128,
-      "command": ["./app_server.sh"]
+      "command": ["./app_server.sh"],
+        "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ]
     }
   ]
 }
