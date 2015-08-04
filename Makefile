@@ -38,6 +38,6 @@ redeploy:
 
 # export amazon credentials
 credentials:
-	export AW=$(id)
+	export AWS_ACCESS_KEY_ID=$(id)
 	export AWS_SECRET_ACCESS_KEY=$(key)
 
