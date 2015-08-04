@@ -25,7 +25,7 @@ deploy_to_cloud: configure_docker_aws build_app push_app redeploy
 	@echo "done deploying"
 
 configure_docker_aws:
-	ansible-playbook -c local  devops/app_container/configure_docker_aws.yml --extra-vars='env=$(env) version=$(VERSION) name=$(NAME)'
+	ansible-playbook -c local -i devops/app_container/inventory.ini devops/app_container/configure_docker_aws.yml --extra-vars='env=$(env) version=$(VERSION) name=$(NAME)'
 
 build_app:
 	docker build --tag=$(NAME):$(VERSION) .
