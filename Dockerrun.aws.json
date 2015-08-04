@@ -7,7 +7,7 @@
   "containerDefinitions": [
     {
       "name": "web",
-      "image": "mwaaas/django-sample-app:staging_ecfb",
+      "image": "mwaaas/django-sample-app:staging_4c72",
       "essential": true,
       "memory": 128,
       "command": ["./app_server.sh"],
