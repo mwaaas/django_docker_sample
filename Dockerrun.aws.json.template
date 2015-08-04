@@ -1,16 +1,22 @@
 {
-  "AWSEBDockerrunVersion": "1",
+  "AWSEBDockerrunVersion": "2",
   "Authentication": {
     "Bucket": "mwaside",
     "Key": ".dockercfg"
   },
-  "Image": {
-    "Name": "mwaaas/django-sample-app:<TAG>",
-    "Update": "true"
-  },
-  "Ports": [
+  "containerDefinitions": [
     {
-      "ContainerPort": "3000"
+      "name": "web",
+      "image": "mwaaas/django-sample-app:<TAG>",
+      "essential": true,
+      "memory": 128,
+      "command": ["./app_server.sh"],
+        "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ]
     }
   ]
 }
