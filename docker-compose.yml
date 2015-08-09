@@ -1,5 +1,11 @@
+cloudwatchlogs:
+  image: mwaaas/cloudwatchlogs:0.0.1
+
+
 web:
   build: .
   command: ./app_server.sh
   ports:
     - 80:80
+  links:
+    - cloudwatchlogs
