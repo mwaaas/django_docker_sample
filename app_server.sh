@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 
-exec python manage.py runserver 0.0.0.0:80  --settings=django_docker_sample.settings
-
+exec  gunicorn --bind=0.0.0.0:80 django_docker_sample.wsgi \
+        --settings=django_docker_sample.settings\
+        --log-level=info \
+        --log-syslog \
+        --log-syslog-to=cloudwatchlogs \
+        --log-syslog-prefix=SYSLOG_PREFIX \
+        --log-syslog-to=udp://cloudwatchlogs:514
