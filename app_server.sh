@@ -4,8 +4,4 @@ exec  gunicorn --bind=0.0.0.0:80 django_docker_sample.wsgi \
         --settings=django_docker_sample.settings\
         --log-level=info \
         --log-syslog \
-        --log-syslog-to=cloudwatchlogs \
-        --log-syslog-to=udp://cloudwatchlogs:514 \
-        --log-file=gunicorn.log \
-        --access-logfile=access.log \
-        --error-logfile=error.log
+        --log-syslog-to=udp://cloudwatchlogs:514
