@@ -4,7 +4,7 @@
     "Bucket": "mwaside",
     "Key": ".dockercfg"
   },
-  "volumes": [
+   "volumes": [
     {
       "name": "ecs_instance_logs",
       "host": {
@@ -31,7 +31,7 @@
     },
     {
       "name": "web",
-      "image": "mwaaas/django-sample-app:staging_",
+      "image": "mwaaas/django-sample-app:staging_a5b4",
       "links": [
         "cloudwatchlogs"
       ],
