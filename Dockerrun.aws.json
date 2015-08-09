@@ -31,7 +31,7 @@
     },
     {
       "name": "web",
-      "image": "mwaaas/django-sample-app:staging_9ed5",
+      "image": "mwaaas/django-sample-app:staging_ecfe",
       "links": [
         "cloudwatchlogs"
       ],
