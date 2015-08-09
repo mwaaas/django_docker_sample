@@ -16,6 +16,7 @@
     {
       "name": "loggy",
       "image": "sendgridlabs/loggly-docker",
+      "memory": 128,
       "environment": [
         {
           "name": "TOKEN",
