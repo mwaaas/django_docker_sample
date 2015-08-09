@@ -20,13 +20,13 @@
         {
           "name": "TOKEN",
           "value": "dddaaa51-f410-4d6e-ae03-3a7fe250e561"
-        }
+        },
         {
           "name":"TAG",
           "value": "Docker"
         }
       ]
-    }
+    },
     {
       "name": "web",
       "image": "mwaaas/django-sample-app:staging_594a",
