@@ -5,5 +5,4 @@ exec  gunicorn --bind=0.0.0.0:80 django_docker_sample.wsgi \
         --log-level=info \
         --log-syslog \
         --log-syslog-to=cloudwatchlogs \
-        --log-syslog-prefix=SYSLOG_PREFIX \
         --log-syslog-to=udp://cloudwatchlogs:514
