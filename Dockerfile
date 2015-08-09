@@ -1,4 +1,4 @@
-from mwaaas/django-sample-packages:0.0.1
+from mwaaas/django-sample-packages:0.0.2
 
 # Add source code
 ADD . .
