@@ -16,7 +16,7 @@
     {
       "environment": [],
       "name": "cloudwatchlogs",
-      "image": "mwaaas/cloudwatchlogs",
+      "image": "mwaaas/cloudwatchlogs:0.0.1",
       "cpu": 50,
       "portMappings": [],
       "memory": 64,
