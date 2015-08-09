@@ -16,7 +16,7 @@
     {
       "environment": [],
       "name": "cloudwatchlogs",
-      "image": "my_docker_hub_repo/cloudwatchlogs",
+      "image": "mwaaas/cloudwatchlogs",
       "cpu": 50,
       "portMappings": [],
       "memory": 64,
