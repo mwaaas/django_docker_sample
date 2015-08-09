@@ -4,6 +4,14 @@
     "Bucket": "mwaside",
     "Key": ".dockercfg"
   },
+   "volumes": [
+    {
+      "name": "ecs_instance_logs",
+      "host": {
+        "sourcePath": "/var/log"
+      }
+    }
+  ],
   "containerDefinitions": [
     {
       "environment": [],
