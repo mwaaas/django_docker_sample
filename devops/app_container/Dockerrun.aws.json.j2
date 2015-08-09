@@ -6,8 +6,27 @@
   },
   "containerDefinitions": [
     {
+      "environment": [],
+      "name": "cloudwatchlogs",
+      "image": "mwaaas/cloudwatchlogs:0.0.1",
+      "cpu": 50,
+      "portMappings": [],
+      "memory": 64,
+      "essential": true,
+      "mountPoints": [
+        {
+          "sourceVolume": "ecs_instance_logs",
+          "containerPath": "/mnt/ecs_instance_logs",
+          "readOnly": true
+        }
+      ]
+    },
+    {
       "name": "web",
       "image": "{{name}}:{{version}}",
+      "links": [
+        "cloudwatchlogs"
+      ],
       "essential": true,
       "memory": 128,
       "command": ["./app_server.sh"],
