@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-exec  gunicorn --bind=0.0.0.0:80 django_docker_sample.wsgi \
-        --settings=django_docker_sample.settings\
+exec  gunicorn --bind=0.0.0.0:80 config.wsgi \
+        --settings=config.settings.base\
         --log-level=info \
         --log-syslog \
         --log-syslog-to=udp://loggy:514 \
