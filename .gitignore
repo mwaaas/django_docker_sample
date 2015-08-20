@@ -8,3 +8,6 @@
 !.elasticbeanstalk/global.yml
 
 *.pyc
+
+config/db.sqlite3
+config/static
