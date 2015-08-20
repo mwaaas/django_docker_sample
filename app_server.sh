@@ -12,4 +12,5 @@ exec  gunicorn --bind=0.0.0.0:3000 config.wsgi \
         --log-syslog-to=udp://loggy:514 \
         --log-file=-\
         --access-logfile=-\
-        --error-logfile=-
+        --error-logfile=- \
+        --reload
