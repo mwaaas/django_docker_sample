@@ -1,11 +1,26 @@
-cloudwatchlogs:
-  image: mwaaas/cloudwatchlogs:0.0.1
+nginx:
+  build: devops/nginx_container
+  links:
+    - web:web
+  volumes_from:
+    - web
+  ports:
+    - 80:80
+loggy:
+  image: sendgridlabs/loggly-docker
+  environment:
+    - TOKEN=dddaaa51-f410-4d6e-ae03-3a7fe250e561
+    - TAG=Docker
 
 
 web:
-  build: .
+  image: mwaaas/django-sample-packages:0.0.2
   command: ./app_server.sh
+  volumes:
+    - :/root/code
   ports:
-    - 80:80
+    - 8000:3000
+  environment:
+    - DJANGO_SETTINGS_MODULE=config.settings.development
   links:
-    - cloudwatchlogs
+    - loggy:loggy
