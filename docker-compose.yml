@@ -14,7 +14,7 @@ loggy:
 
 
 web:
-  image: mwaaas/django-sample-packages:0.0.2
+  build: .
   command: ./app_server.sh
   volumes:
     - :/root/code
